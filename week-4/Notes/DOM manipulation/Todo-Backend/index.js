@@ -91,6 +91,20 @@ app.get("/getTodos", (req, res) => {
     res.json({ todos: randomTodos });
 });
 
+// get todos by id /todo?id=1
+app.get("/todo", (req, res) => {
+    const id = req.query.id;
+    console.log(`id is ${id}`);
+    for(let i = 0; i < todos.length; i++){
+      const todo = todos[i].find((todo) => todo.id == id);
+      if(todo){
+        res.json({ todo: todo });
+        return;
+      }
+    }
+    res.json({ todo: todo });
+});
+
 app.listen(port, ()=>{
   console.log(`Server is listening to port ${port}`);
 });
