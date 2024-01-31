@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* box-sizing: border-box; */
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    margin: 40px;
+    box-shadow: 0px 0px 50px black;
+}
+
+.upperDiv, .lowerDiv {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upperDiv {
+    background-color: aquamarine;
+}
+
+.profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    order: -1;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.profileImg {
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 22%;
+    z-index: 1;
+}
