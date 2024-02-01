@@ -6,8 +6,10 @@ export function Profile() {
             <div className="upperDiv"></div>
             <img className="profileImg" src={profileImg} alt="" />
             <div className="lowerDiv">
-                <h3>Shivam Kumar</h3>
-                <p>20</p>
+                <div>
+                    <p><b>Shivam Kumar</b></p>
+                    <p>20</p>
+                </div>
                 <div className="location">Punjab</div>
             </div>
         </>
