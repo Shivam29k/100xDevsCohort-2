@@ -1,4 +1,4 @@
-# Harkirat's 100xdevs 0-1 Cohort :books:
+# Harkirat's 100xdevs 0-100 Cohort :books:
 
 Welcome to Cohort 0-1 repository! This is where I'll be uploading all the code I write as I progress through my course. The code is neatly organized week by week, making it easy for anyone to follow along.
 
@@ -16,7 +16,7 @@ Here are the links to the repositories for each week: -->
 
 ## Syllabus
 
-![Syllabus](syllabus_0-1.png)
+![Syllabus](syllabus_0-100.png)
 
 ## About Me :wave:
 
