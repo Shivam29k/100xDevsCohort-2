@@ -1,0 +1,54 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 20px;
+  margin: 30px;
+  width: max-content;
+  box-shadow: 0 10px 20px rgb(79, 77, 77);
+  border-radius: 25px;
+  background-color: rgb(250, 246, 246);
+}
+button {
+  height: 35px;
+  width: 100px;
+  margin: 0px 0px;
+  border-radius: 10px;
+  border: 0px;
+  box-shadow: 0 2px 5px rgb(79, 77, 77);
+}
+
+.parent :nth-child(1) {
+  background-color: red;
+  color: white;
+}
+.parent :nth-child(2) {
+  background-color: yellow;
+}
+.parent :nth-child(3) {
+  background-color: black;
+  color: white;
+}
+.parent :nth-child(4) {
+  background-color: purple;
+  color: white;
+}
+.parent :nth-child(5) {
+  background-color: green;
+  color: white;
+}
+.parent :nth-child(6) {
+  background-color: blue;
+  color: white;
+}
