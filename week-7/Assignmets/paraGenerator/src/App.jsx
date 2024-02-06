@@ -11,20 +11,23 @@ function App() {
       paragraph = paragraph + " " + words[parseInt(Math.random() * (words.length - 1))]
     }
     setPara(paragraph);
-    console.log("parra rerendering -------", count)
   }
 
-  function updateCount(value) {
-    count = value;
-    console.log("count updatwed to", count);
+  function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+      paragraph(count);
+    }
   }
+
+
+  
 
   return (
     <>
       <div><h1>Para Generator</h1></div>
       <div className='input'>
-        <Input updateCount={setCount} />
-        <button onClick={() => { paragraph(count) }}>Generate</button>
+        <Input updateCount={setCount} handleKeyPress={handleKeyPress}/>
+        <button id='in' onClick={() => { paragraph(count) }}>Generate</button>
 
       </div>
       <Paragraph para={para} />
@@ -32,10 +35,10 @@ function App() {
   )
 }
 
-function Input({ updateCount }) {
-  return <input type="text" placeholder='enter the number' onChange={(e) => {
+function Input({ updateCount, handleKeyPress }) {
+  return <input id="in" type="number" placeholder='enter the number' onChange={(e) => {
       updateCount(parseInt(e.target.value));
-    }} />
+    }} onKeyDown={handleKeyPress}/>
 }
 
 
