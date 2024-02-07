@@ -19,19 +19,23 @@ h1{
     height: 50px;
     width: 500px;
     border-radius: 30px;
-    box-shadow: 0 10px 10px;
+    box-shadow: 0 10px 10px black;
 }
 
 .input:hover {
-    border: 4px solid rgb(99, 7, 191);
+    border: 4px solid rgb(178, 198, 144);
     border-radius: 30px;
     box-sizing: content-box;
 }
+.input:focus {
+    border: none;
+}
+
 .input input{
     height: 100%;
     width: 70%;
     padding: 0px  20px;
-    /* border: none; */
+    border: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     /* box-sizing: border-box; */
@@ -47,8 +51,15 @@ h1{
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     /* box-sizing: border-box; */
+    color: rgb(183, 216, 129);
+    background-color: #515c61;
+    border: none;
 }
-
+.input button:hover {
+    color: rgb(140, 212, 24);
+    width: 900;
+    font-size: 22px;
+}
 .para {
     font-size: large;
     padding-top: 50px;
@@ -56,3 +67,7 @@ h1{
     text-align: center;
 }
 
+body {
+    background-color: #47494a;
+    color: white;
+}
