@@ -1,0 +1,30 @@
+.bdaycard {
+    height: 700px;
+    width: 400px;
+    border-radius: 10px;
+    background-image: url('../../assets/card1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 12px 16px 26px #8e10a4;
+}
+
+.wish {
+    font-family: 'Sacramento', cursive;
+    font-weight: 900;
+    font-size: 5rem;
+    color: #8e10a4;
+    /* text-shadow: 2px 8px 8px rgba(0, 0, 0, 0.9); */
+    text-shadow: 2px 4px 5px rgba(23, 75, 0, 0.9);
+}
+.name {
+    padding-top: 30px;
+    font-size: 3rem;
+    font-family: 'Kalam', cursive;
+    color: #d148e9;
+    text-shadow: 2px 4px 5px rgba(23, 75, 0, 0.9);
+}
