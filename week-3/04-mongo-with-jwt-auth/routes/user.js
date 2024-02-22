@@ -19,10 +19,19 @@ router.post('/signup', (req, res) => {
 });
 
 router.post('/signin', async (req, res) => {
-    const user = await User.findOne({username: req.username});
+    const user = await User.findOne({username: req.body.username});
+    console.log(user);
     if(user){
-        if(user.password == req.password){
-            return jwt.sign({username: username}, jwtPassword);
+        if(user.password == req.body.password){
+            console.log("Step 1")
+            jwt.sign({username: req.body.username}, jwtPassword, { expiresIn: '1h' }, (err, token) => {
+                if (err) {
+                  console.log("Error");
+                  res.json({message: "Internal server error."});
+                } else {
+                  res.json({token: token});
+                }
+              });
         } else {
             res.json({message: "Incorrect password"});
         }
@@ -32,11 +41,11 @@ router.post('/signin', async (req, res) => {
 });
 
 router.get('/courses', async (req, res) => {
-    courses = await Course.find({});
+    const courses = await Course.find({});
     res.send(courses);
 });
 
-router.post('/courses/:courseId', userMiddleware, async (req, res) => {
+router.post('/courses/:courseId', userMiddleware,  async (req, res) => {
     const course = await Course.findById(req.params.courseId);
     if(course){
         const user = await User.findOne({username: req.headers.username});
