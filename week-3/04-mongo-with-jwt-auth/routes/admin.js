@@ -42,7 +42,7 @@ router.post('/courses', adminMiddleware, (req, res) => {
 });
 
 router.get('/courses', adminMiddleware, async (req, res) => {
-    courses = await Course.find({});
+    const courses = await Course.find({});
     res.send(courses);
 });
 
