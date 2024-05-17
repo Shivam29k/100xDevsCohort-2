@@ -1,0 +1,22 @@
+version: '1.0'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb_volume:/data/db
+  backend:
+    build: .
+    container_name: test_backend_app
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/myDatabase
+  
+volumes:
+  mongodb_volume:
+
+
+# all the services are running in the same network
